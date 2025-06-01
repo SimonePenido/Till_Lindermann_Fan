@@ -1,35 +1,53 @@
-# Simone_Simons_Fan
+# Till_Linderman_Fan
 
+![GitHub repo size](https://img.shields.io/github/repo-size/SEU_USUARIO/Till_Linderman_Fan)
+![GitHub stars](https://img.shields.io/github/stars/SEU_USUARIO/Till_Linderman_Fan?style=social)
+![GitHub forks](https://img.shields.io/github/forks/SEU_USUARIO/Till_Linderman_Fan?style=social)
+![GitHub issues](https://img.shields.io/github/issues/SEU_USUARIO/Till_Linderman_Fan)
+![MIT License](https://img.shields.io/badge/license-MIT-green)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/SEU_BADGE_ID/deploy-status)](https://app.netlify.com/sites/SEU_SITE_ID/deploys)
 
-Bem-vindo ao repositório do projeto <link>Simone Simons Fan</link>! Aqui, você encontrará todos os detalhes e recursos relacionados ao projeto.
+Bem-vindo ao repositório do projeto **Till Linderman Fan**! Este projeto é uma página web estática dedicada ao vocalista Till Lindemann, com foco em design moderno, responsividade e boas práticas de desenvolvimento front-end.
 
-## Visão Geral
+## 🚀 Deploy
 
-<link>Projeto baseado no curso <a href="https://www.udemy.com/course/sass-e-scss-do-basico-ao-avancado-projetos/](https://www.udemy.com/course/curso-web-design-fundamentos-aprenda-html-css-e-javascript/?kw=Web+Frontend+Fundamentos%3A+HTML%2C+CSS+e+JS&src=sac">Web Frontend Fundamentos: HTML, CSS e JS + 10 Projetos</a>, ministrado pelo instrutor Daniel Tapias Morales, plataforma Udemy. Trata-se de uma página web estática de Fã da cantora Simone Simons, vocalista da banda Épica, com imagens de divulgação e links das redes sociais da cantora.
+Acesse a aplicação em produção: [till-linderman-fan.netlify.app](https://till-linderman-fan.netlify.app)
 
-## Funcionalidades
+## 👀 Visão Geral
 
-- Exibição de informações sobre a cantora Simone Simons.
-- Imagens de divulgação.
-- Links das redes sociais da cantora.
+Projeto desenvolvido com base no curso [Web Frontend Fundamentos: HTML, CSS e JS + 10 Projetos](https://www.udemy.com/course/curso-web-design-fundamentos-aprenda-html-css-e-javascript/?kw=Web+Frontend+Fundamentos%3A+HTML%2C+CSS+e+JS&src=sac), ministrado por Daniel Tapias Morales na Udemy. O objetivo é demonstrar domínio em HTML e CSS, criando uma landing page atrativa para fãs do artista, com imagens, biografia e links para redes sociais.
 
-## Tecnologias Utilizadas
+## ✨ Funcionalidades
 
-- HTML
-- CSS
+- Exibição de informações sobre Till Linderman.
+- Galeria de imagens de divulgação.
+- Links para redes sociais oficiais.
+- Layout responsivo e acessível.
+- Deploy automatizado via Netlify.
 
-## Como Contribuir
+## 🛠️ Tecnologias Utilizadas
+
+- HTML5 semântico
+- CSS3 moderno (Flexbox, Grid)
+- Deploy contínuo com Netlify
+
+## 💡 Como Contribuir
 
 1. Faça um fork deste repositório.
-2. Crie um branch com uma nova feature: `git checkout -b minha-nova-feature`.
-3. Faça as alterações necessárias e adicione os commits: `git commit -m 'Adicionando uma nova feature'`.
-4. Envie para o branch principal: `git push origin minha-nova-feature`.
-5. Crie uma pull request para revisão.
+2. Crie um branch: `git checkout -b minha-nova-feature`
+3. Commit suas alterações: `git commit -m 'feat: nova feature'`
+4. Push para o branch: `git push origin minha-nova-feature`
+5. Abra um Pull Request
 
-## Licença
+## 📄 Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
-## Agradecimentos
+## 🤝 Agradecimentos
 
-- Agradeço a todos que contribuírem para o desenvolvimento deste projeto.
+- Agradeço a todos os colaboradores e à comunidade open source.
+- Inspirado pelo trabalho de Daniel Tapias Morales.
+
+---
+
+> **Destaque seu portfólio com projetos reais e código limpo!**
