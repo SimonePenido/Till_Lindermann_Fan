@@ -52,4 +52,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
 
-> **Destaque seu portfólio com projetos reais e código limpo!**
+> **Entre em contato! [Simone Penido](https://www.linkedin.com/in/simone-penido/)**
