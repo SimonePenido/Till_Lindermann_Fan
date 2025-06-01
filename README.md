@@ -5,7 +5,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/SEU_USUARIO/Till_Linderman_Fan?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/SEU_USUARIO/Till_Linderman_Fan)
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/SEU_BADGE_ID/deploy-status)](https://app.netlify.com/sites/SEU_SITE_ID/deploys)
+
 
 Bem-vindo ao repositório do projeto **Till Linderman Fan**! Este projeto é uma página web estática dedicada ao vocalista Till Lindemann, com foco em design moderno, responsividade e boas práticas de desenvolvimento front-end.
 
