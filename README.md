@@ -11,7 +11,7 @@ Bem-vindo ao repositório do projeto **Till Linderman Fan**! Este projeto é uma
 
 ## 🚀 Deploy
 
-Acesse a aplicação em produção: [till-linderman-fan.netlify.app](https://till-linderman-fan.netlify.app)
+Acesse a aplicação em produção: [till-lindermann-fan.netlify.app](https://till-lindermann-fan.netlify.app)
 
 ## 👀 Visão Geral
 
