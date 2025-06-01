@@ -52,4 +52,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
 
-> **Entre em contato! [Simone Penido](https://www.linkedin.com/in/simone-penido/)**
+> **Entre em contato! [Linkedin: Simone Penido](https://www.linkedin.com/in/simone-penido/)**
