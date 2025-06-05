@@ -1,3 +1,76 @@
+/* =========================
+   RESET & GLOBAL SETTINGS
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make ALL media elements intrinsically responsive */
+img, video, iframe {
+    max-width: 100%; /* scales down but never grows beyond container */
+    height: auto;
+    display: block;
+}
+
+/* Fluid typography scale helper – we will override in media queries. 1rem follows body size */
+html {
+    font-size: 100%; /* 16 px default (desktop) – adjusted below */
+}
+
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    background-image: url("imagens/img6.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* ==================================================
+   ORIGINAL STYLES (unchanged) ––– truncated comment
+   ================================================== */
+
+/* Estilo do container principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+.hero nav,
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero-content {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 8px #000;
+    margin-top: 2rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -516,4 +589,78 @@ li {
         font-size: 1.2rem;
         letter-spacing: 2px;
     }
+}
+/* =========================
+   RESPONSIVE BREAKPOINTS
+   ========================= */
+/*
+   BREAKPOINTS UTILIZADAS
+   ----------------------
+   Pequenas:  0 – 480 px
+   Médias:   481 – 992 px
+   Grandes:   ≥ 993 px
+*/
+
+/***** PEQUENAS TELAS: smartphones *******/
+@media (max-width: 480px) {
+    /* TIPOGRAFIA */
+    html {
+        font-size: 87.5%; /* 14 px base */
+    }
+    .hero-content h1   { font-size: 2.2rem; }
+    .hero-content p    { font-size: 1rem; }
+    article h2         { font-size: 1.4rem; }
+    article h3         { font-size: 1.6rem; }
+    article p,
+    li                 { font-size: 0.9rem; }
+
+    /* LAYOUT DA GALERIA – 1 coluna */
+    .galeria-container { grid-template-columns: 1fr; }
+
+    /* Ajustes de imagens específicas que tinham tamanhos fixos */
+    .fire img,
+    .cdimg img,
+    .slider .slide     { width: 100%; height: auto; }
+}
+
+/***** TELAS MÉDIAS: tablets *******/
+@media (min-width: 481px) and (max-width: 992px) {
+    /* TIPOGRAFIA */
+    html {
+        font-size: 100%; /* 16 px base */
+    }
+    .hero-content h1   { font-size: 3rem; }
+    .hero-content p    { font-size: 1.1rem; }
+    article h2         { font-size: 1.8rem; }
+    article h3         { font-size: 2rem; }
+
+    /* LAYOUT DA GALERIA – 2 colunas */
+    .galeria-container { grid-template-columns: repeat(2, 1fr); }
+
+    /* Ajustes de imagens */
+    .fire img,
+    .cdimg img         { width: 60%; height: auto; }
+}
+
+/***** TELAS GRANDES: laptops / desktops *******/
+@media (min-width: 993px) {
+    /* TIPOGRAFIA */
+    html {
+        font-size: 112.5%; /* 18 px base */
+    }
+    .hero-content h1   { font-size: 4rem; }
+    .hero-content p    { font-size: 1.2rem; }
+    article h2         { font-size: 2rem; }
+    article h3         { font-size: 2.4rem; }
+
+    /* LAYOUT DA GALERIA – 3 colunas (valor padrão) */
+    .galeria-container { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* =========================
+   EXTRA – HIGH‑DPI / 4K
+   ========================= */
+@media (min-width: 1600px) {
+    html { font-size: 118.75%; } /* ~19 px */
+    .hero-content h1 { font-size: 4.5rem; }
 }
