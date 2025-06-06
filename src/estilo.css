@@ -1,76 +1,3 @@
-/* =========================
-   RESET & GLOBAL SETTINGS
-   ========================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Make ALL media elements intrinsically responsive */
-img, video, iframe {
-    max-width: 100%; /* scales down but never grows beyond container */
-    height: auto;
-    display: block;
-}
-
-/* Fluid typography scale helper – we will override in media queries. 1rem follows body size */
-html {
-    font-size: 100%; /* 16 px default (desktop) – adjusted below */
-}
-
-body {
-    margin: 0;
-    font-family: 'Cinzel', serif;
-    background-image: url("imagens/img6.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-
-/* ==================================================
-   ORIGINAL STYLES (unchanged) ––– truncated comment
-   ================================================== */
-
-/* Estilo do container principal */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.hero {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    min-height: 600px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.hero-bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-.hero nav,
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-.hero-content {
-    text-align: center;
-    color: #fff;
-    text-shadow: 0 2px 8px #000;
-    margin-top: 2rem;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -80,7 +7,7 @@ body {
 body {
     margin: 0;
     font-family: 'Cinzel', serif;
-    background-image: url("imagens/img6.jpg");
+    background-image: url("imagens/fundo_body.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -207,8 +134,23 @@ body {
     background-color: rgba(112, 110, 110, 0.5);
 }
 
-
-
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+    .hero nav ul {
+        margin: 10px 20px 0 0;
+    }
+    .hero nav a {
+        font-size: .6rem;
+      }
+}
 main {
     width: 90%;
     margin: auto;
@@ -260,25 +202,21 @@ article a {
     font-weight: 800;
 }
 
-
-
-ul {
-    list-style: circle;
-    padding: 0;
+article ul {
+    list-style-type: circle;
+    padding-left: 20px;
     margin: 1em 0;
 }
 
-li {
+article li {
     font-family: Arial;
     font-size: 1rem;
     text-align: justify;
     letter-spacing: .08rem;
     line-height: 1.5rem;
     margin: 0.5em 1em;
-        display: flex;
-    justify-content: center;
-    align-items: center;
-
+    display: list-item;
+    list-style-type: circle;
 }
 
 .gif img {
@@ -288,6 +226,48 @@ li {
     border-radius: 5px;
 }
 
+.imgefect img {
+    display: grid;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+filter: sepia(0.5);
+    transition: filter 0.5s ease-in-out;
+
+}
+
+
+.gifcolorChange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.gifcolorChange img{
+    display: grid;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+    animation: colorChange 2s infinite alternate;
+    animation-fill-mode: both;
+    /* Para compatibilidade com navegadores baseados em Webkit */
+    -webkit-animation: colorChange 2s infinite alternate;
+    -webkit-animation-fill-mode: both;
+    filter: hue-rotate(0deg);
+}
+
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
 .fire {
     display: flex;
     justify-content: center;
@@ -296,10 +276,22 @@ li {
 }
 
 .fire img {
-    width: 200px;
+    max-width: 15em;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .fire {
+        flex-direction: column;
+        align-items: center;
+    }
+    .fire img {
+        width: 100%;
+        height: auto;
+        width: 12em;
+    }
 }
 
 .slid {
@@ -358,6 +350,24 @@ li {
     object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {
+    .slid {
+    padding: 1em;
+    }
+    .slider {
+        width: 100%;
+        height: 250px;
+    }
+    .slider .slide {
+        width: 250px;
+        height: 250px;
+    }
+    .slider .slide img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
 @-webkit-keyframes scroll {
     0% { -webkit-transform: translateX(0); transform: translateX(0); }
     100% { -webkit-transform: translateX(calc(-330px * 7)); transform: translateX(calc(-330px * 7)); }
@@ -366,6 +376,37 @@ li {
     0% { -webkit-transform: translateX(0); transform: translateX(0); }
     100% { -webkit-transform: translateX(calc(-330px * 7)); transform: translateX(calc(-330px * 7)); }
 }
+
+
+.botao_galeria {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao_galeria {
+    background-color: #3a30f2af;
+    color: #fff;
+    text-shadow: 1px 1px 1px #fff;
+    margin: 20px auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.botao_galeria:hover {
+    background-color: #010139;
+    color: #fff;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
 
 .cdimg {
     display: flex;
@@ -381,6 +422,18 @@ li {
     height: 250px;
     object-fit: cover;
     border-radius: 6px;
+}
+
+.cdimg img:hover {
+    filter: invert(0.9);
+    transition: filter 0.5s ease-in-out;
+}
+
+.cdlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -420,6 +473,15 @@ li {
     padding: 1em;
 }
 
+@media screen and (max-width: 768px) {
+    .video-wrapper iframe {
+        height: 16em;
+    }
+    .container-video {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 /* Estilo da galeria de imagens */
 .galeria-container {
@@ -552,7 +614,7 @@ li {
     background-color: #00010D;
     text-align: center;
     padding: 1.8rem;
-    text-shadow: 2px 2px 3px #F25430;
+    text-shadow: 2px 2px 3px #0606c6;
     letter-spacing: 2px;
     font-size: .7rem;
 }
@@ -589,78 +651,4 @@ li {
         font-size: 1.2rem;
         letter-spacing: 2px;
     }
-}
-/* =========================
-   RESPONSIVE BREAKPOINTS
-   ========================= */
-/*
-   BREAKPOINTS UTILIZADAS
-   ----------------------
-   Pequenas:  0 – 480 px
-   Médias:   481 – 992 px
-   Grandes:   ≥ 993 px
-*/
-
-/***** PEQUENAS TELAS: smartphones *******/
-@media (max-width: 480px) {
-    /* TIPOGRAFIA */
-    html {
-        font-size: 87.5%; /* 14 px base */
-    }
-    .hero-content h1   { font-size: 2.2rem; }
-    .hero-content p    { font-size: 1rem; }
-    article h2         { font-size: 1.4rem; }
-    article h3         { font-size: 1.6rem; }
-    article p,
-    li                 { font-size: 0.9rem; }
-
-    /* LAYOUT DA GALERIA – 1 coluna */
-    .galeria-container { grid-template-columns: 1fr; }
-
-    /* Ajustes de imagens específicas que tinham tamanhos fixos */
-    .fire img,
-    .cdimg img,
-    .slider .slide     { width: 100%; height: auto; }
-}
-
-/***** TELAS MÉDIAS: tablets *******/
-@media (min-width: 481px) and (max-width: 992px) {
-    /* TIPOGRAFIA */
-    html {
-        font-size: 100%; /* 16 px base */
-    }
-    .hero-content h1   { font-size: 3rem; }
-    .hero-content p    { font-size: 1.1rem; }
-    article h2         { font-size: 1.8rem; }
-    article h3         { font-size: 2rem; }
-
-    /* LAYOUT DA GALERIA – 2 colunas */
-    .galeria-container { grid-template-columns: repeat(2, 1fr); }
-
-    /* Ajustes de imagens */
-    .fire img,
-    .cdimg img         { width: 60%; height: auto; }
-}
-
-/***** TELAS GRANDES: laptops / desktops *******/
-@media (min-width: 993px) {
-    /* TIPOGRAFIA */
-    html {
-        font-size: 112.5%; /* 18 px base */
-    }
-    .hero-content h1   { font-size: 4rem; }
-    .hero-content p    { font-size: 1.2rem; }
-    article h2         { font-size: 2rem; }
-    article h3         { font-size: 2.4rem; }
-
-    /* LAYOUT DA GALERIA – 3 colunas (valor padrão) */
-    .galeria-container { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* =========================
-   EXTRA – HIGH‑DPI / 4K
-   ========================= */
-@media (min-width: 1600px) {
-    html { font-size: 118.75%; } /* ~19 px */
-    .hero-content h1 { font-size: 4.5rem; }
 }
