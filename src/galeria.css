@@ -582,7 +582,7 @@ nav li:nth-child(2) {
 }
 
 #highlight {
-  color: #b30101;
+  color: #0606c6;
   font-size: 1.25rem;
 }
 
@@ -651,7 +651,7 @@ img:hover {
 
 footer {
   padding: 1rem 0;
-  background: #180000;
+  background: #010139;
   text-align: center;
 }
 
